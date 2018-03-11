@@ -21,3 +21,8 @@ result ← pop from the operand stack
 ## Stack
 
 This was essentially created to use the Stack implementation from my [algorithms repository](https://github.com/ethan-t/algorithms).
+
+## Todo (maybe)
+
+- Support for parentheses
+- More operations 
