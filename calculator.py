@@ -31,27 +31,26 @@ def calc(expr):
     for token in expr:
         # Check if the token is an operator
         if token in ["+", "-", "*", "/"]:
-            print("Found operator " + token)
             operatorStack.push(token)
             pendingOperand = False
         # Check if the operand is a valid number
         elif is_number(token):
-            print("Found operand " + token)
             operand = token
+            # Check if a calculation should be done
             if pendingOperand == True:
                 while operandStack.height() != 0:
                     operand_1 = operandStack.pop()
                     operator = operatorStack.pop()
-                    print("Evaluating " + str(operand_1) + " " + operator + " " + str(operand))
-                    operand = evaluate(operator, operand_1, operand)
-                    print("Evaluation returned " + str(operand))
+                    # print("Evaluating " + str(operand_1) + " " + operator + " " + str(operand))
+                    operand = evaluate(operator, operand_1, operand
+            # Push the number to the operand stack
             operandStack.push(operand)
             pendingOperand = True
-        print("The items of the operandStack read: " + str(operandStack.items))
-        print("The items of the operatorStack read: " + str(operatorStack.items))
+    # Return result
     return operandStack.pop()
 
 if __name__ == "__main__":
+    # Read-Eval-Print Loop
     while True:
         expr = raw_input("> ")
         print(calc(expr))
