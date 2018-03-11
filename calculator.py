@@ -51,4 +51,7 @@ def calc(expr):
         print("The items of the operatorStack read: " + str(operatorStack.items))
     return operandStack.pop()
 
-print(calc("- * / 15 - 7 + 1 1 3 + 2 + 1 1"))
+if __name__ == "__main__":
+    while True:
+        expr = raw_input("> ")
+        print(calc(expr))
