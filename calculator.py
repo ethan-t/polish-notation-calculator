@@ -42,10 +42,12 @@ def calc(expr):
                     operand_1 = operandStack.pop()
                     operator = operatorStack.pop()
                     # print("Evaluating " + str(operand_1) + " " + operator + " " + str(operand))
-                    operand = evaluate(operator, operand_1, operand
+                    operand = evaluate(operator, operand_1, operand)
             # Push the number to the operand stack
             operandStack.push(operand)
             pendingOperand = True
+        else:
+            print(str(token) + " is not a valid token.")
     # Return result
     return operandStack.pop()
 
