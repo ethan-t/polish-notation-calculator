@@ -46,7 +46,7 @@ def calc(expr):
             # Push the number to the operand stack
             operandStack.push(operand)
             pendingOperand = True
-        else:
+        else: # Default if the token is not a operator or cannot be a float
             print(str(token) + " is not a valid token.")
     # Return result
     return operandStack.pop()
